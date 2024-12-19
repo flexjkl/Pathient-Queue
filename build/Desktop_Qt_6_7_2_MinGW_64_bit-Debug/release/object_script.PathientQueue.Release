@@ -1,0 +1,11 @@
+release/Pathient.o
+release/appointwindow.o
+release/insertwindow.o
+release/main.o
+release/mainwindow.o
+release/showwindow.o
+release/qrc_icons.o
+release/moc_appointwindow.o
+release/moc_insertwindow.o
+release/moc_mainwindow.o
+release/moc_showwindow.o

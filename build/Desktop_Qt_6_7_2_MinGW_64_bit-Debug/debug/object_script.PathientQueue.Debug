@@ -1,0 +1,11 @@
+debug/Pathient.o
+debug/appointwindow.o
+debug/insertwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/showwindow.o
+debug/qrc_icons.o
+debug/moc_appointwindow.o
+debug/moc_insertwindow.o
+debug/moc_mainwindow.o
+debug/moc_showwindow.o
