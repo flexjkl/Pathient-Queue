@@ -388,6 +388,7 @@ Makefile: ../../PathientQueue.pro ../../../../Qt/6.7.2/mingw_64/mkspecs/win32-g+
 		../../../../Qt/6.7.2/mingw_64/mkspecs/features/toolchain.prf \
 		../../../../Qt/6.7.2/mingw_64/mkspecs/features/default_pre.prf \
 		../../../../Qt/6.7.2/mingw_64/mkspecs/features/win32/default_pre.prf \
+		../../../../QtLibraries/QXlsx/QXlsx.pri \
 		../../../../Qt/6.7.2/mingw_64/mkspecs/features/resolve_config.prf \
 		../../../../Qt/6.7.2/mingw_64/mkspecs/features/exclusive_builds_post.prf \
 		../../../../Qt/6.7.2/mingw_64/mkspecs/features/default_post.prf \
@@ -734,6 +735,7 @@ Makefile: ../../PathientQueue.pro ../../../../Qt/6.7.2/mingw_64/mkspecs/win32-g+
 ../../../../Qt/6.7.2/mingw_64/mkspecs/features/toolchain.prf:
 ../../../../Qt/6.7.2/mingw_64/mkspecs/features/default_pre.prf:
 ../../../../Qt/6.7.2/mingw_64/mkspecs/features/win32/default_pre.prf:
+../../../../QtLibraries/QXlsx/QXlsx.pri:
 ../../../../Qt/6.7.2/mingw_64/mkspecs/features/resolve_config.prf:
 ../../../../Qt/6.7.2/mingw_64/mkspecs/features/exclusive_builds_post.prf:
 ../../../../Qt/6.7.2/mingw_64/mkspecs/features/default_post.prf:
