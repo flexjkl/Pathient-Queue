@@ -8,10 +8,14 @@ int IDGenerate();
 struct Pathient{
     Pathient(const QString& fllNm);
 
+    Pathient(const QString& fllNm, const int& ident);
+
+    Pathient(const Pathient &pathient);
+
     ~Pathient();
 
-    int id;
     QString fullName;
+    int id;
 };
 
 #endif

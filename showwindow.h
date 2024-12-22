@@ -4,6 +4,8 @@
 #include "Pathient.h"
 #include <QTableWidget>
 #include <QPushButton>
+#include <QHBoxLayout>
+#include <QString>
 #include <list>
 
 class ShowWindow : public QTableWidget
@@ -18,6 +20,12 @@ public:
 
 private:
     std::list<Pathient> *pathientQueue;
+    QPushButton *importButton, *exportButton;
+    QHBoxLayout* layout;
 
+private slots:
+    void importQueue();
+
+    void exportQueue();
 };
 #endif

@@ -10,4 +10,8 @@ int IDGenerate(){
 
 Pathient::Pathient(const QString& fllNm) : fullName(fllNm), id(IDGenerate()) {}
 
+Pathient::Pathient(const QString& fllNm, const int& ident) : fullName(fllNm), id(ident) {}
+
+Pathient::Pathient(const Pathient &pathient) : id(pathient.id), fullName(pathient.fullName) {}
+
 Pathient::~Pathient() {}

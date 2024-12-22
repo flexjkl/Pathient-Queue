@@ -25,6 +25,11 @@ HEADERS += \
 
 RESOURCES += icons.qrc
 
+QXLSX_PARENTPATH=C:/QtLibraries/         # current QXlsx path is . (. means curret directory)
+QXLSX_HEADERPATH=C:/QtLibraries/QXlsx/header/  # current QXlsx header path is ./header/
+QXLSX_SOURCEPATH=C:/QtLibraries/QXlsx/source/  # current QXlsx source path is ./source/
+include(C:/QtLibraries/QXlsx/QXlsx.pri)
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

@@ -9,6 +9,8 @@
 #include <QLabel>
 #include <list>
 
+bool checkName(QString pathientName);
+
 class InsertWindow : public QWidget
 {
     Q_OBJECT
