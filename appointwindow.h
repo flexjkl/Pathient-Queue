@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QLineEdit>
 #include <list>
 
 class AppointWindow : public QWidget{
@@ -17,10 +18,11 @@ public:
     ~AppointWindow();
 
 private:
-    std::list<Pathient>* pathientQueue;
-    QLabel *pathientOnAppoint, *text;
+    std::list<Pathient> *pathientQueue;
+    QLabel *text;
+    QLineEdit *pathientOnAppoint;
     QPushButton *appointButton, *closeButton;
-    QVBoxLayout* layout;
+    QVBoxLayout *layout;
 
 private slots:
     void appointPathient();

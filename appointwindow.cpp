@@ -10,9 +10,14 @@ AppointWindow::AppointWindow(std::list<Pathient>& pthntQueue, QWidget* parent) :
     this->setMinimumWidth(300);
     this->setWindowTitle("Приём пациентов");
     this->setWindowIcon(QIcon(":/icons/appoint.ico"));
+    this->setWindowModality(Qt::WindowModality::WindowModal);
 
     text = new QLabel("Пациент на приёме:", this);
-    pathientOnAppoint = new QLabel(this);
+    text->setAlignment(Qt::AlignCenter);
+
+    pathientOnAppoint = new QLineEdit(this);
+    pathientOnAppoint->setReadOnly(true);
+    pathientOnAppoint->setAlignment(Qt::AlignCenter);
 
     appointButton = new QPushButton("Следующий", this);
     closeButton = new QPushButton("Закрыть", this);
@@ -22,6 +27,8 @@ AppointWindow::AppointWindow(std::list<Pathient>& pthntQueue, QWidget* parent) :
     layout->addWidget(pathientOnAppoint);
     layout->addWidget(appointButton);
     layout->addWidget(closeButton);
+
+    this->setLayout(layout);
 
     connect(appointButton, &QPushButton::clicked, this, &appointPathient);
     connect(closeButton, &QPushButton::clicked, this, &closeWindow);

@@ -2,6 +2,18 @@
 #include "mainwindow.h"
 #include <QMessageBox>
 
+bool checkName(QString pathientName){
+    if(pathientName.isEmpty() || *pathientName.begin() == ' ') return false;
+    auto itr = pathientName.begin(), end = pathientName.end();
+    while(itr != end){
+        if(!itr->isLetter()){
+            if( !itr->isSpace()) return false;
+        }
+        itr++;
+    }
+    return true;
+}
+
 InsertWindow::InsertWindow(std::list<Pathient>& pthntQueue, QWidget* parent = nullptr) :
     QWidget(parent),
     pathientQueue(&pthntQueue)
@@ -15,6 +27,7 @@ InsertWindow::InsertWindow(std::list<Pathient>& pthntQueue, QWidget* parent = nu
     this->setWindowIcon(QIcon(":/icons/regist.ico"));
 
     label = new QLabel("Введите ФИО пациента", this);
+    label->setAlignment(Qt::AlignCenter);
 
     insertLine = new QLineEdit(this);
     insertLine->setMinimumWidth(250);
@@ -36,9 +49,10 @@ InsertWindow::InsertWindow(std::list<Pathient>& pthntQueue, QWidget* parent = nu
 InsertWindow::~InsertWindow() {}
 
 void InsertWindow::insertPathient(){
-    if(insertLine->text().isEmpty()){
+    if(!checkName(insertLine->text())){
         QMessageBox* errorMessage = new QMessageBox(this);
-        errorMessage->critical(errorMessage, "Ошибка!", "Вы не заполнили строку ФИО");
+        errorMessage->critical(errorMessage, "Ошибка!", "Некорректные данные!");
+        insertLine->clear();
         return;
     }
     pathientQueue->push_back(Pathient(insertLine->text()));
